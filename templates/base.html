@@ -76,6 +76,9 @@
                         {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 {% endif %}
+                        {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                            {% endif %}
                         
                        
                         <a class="text-black nav-link" href="{% url 'account_login' %}" id="user-options" data-bs-toggle="dropdown"aria-haspopup="true"  aria-expanded="false">
