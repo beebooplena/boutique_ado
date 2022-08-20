@@ -74,8 +74,11 @@
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management yes</a>
                                 {% endif %}
+                        {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management yes</a>
+                        {% endif %}
                       
                         
                        
@@ -126,7 +129,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Yes get Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
+                <h4 class="logo-font my-1"> Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
             </div>            
         </div>
     </header>
